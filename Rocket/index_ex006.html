@@ -2,7 +2,7 @@
 <html>
     <head lang="pt-br">
         <meta charset="utf-8">
-        <title>RS_m2_003</title>
+        <title>RS_m2_005</title>
         <style>
             body{
                 background-color: rgb(147, 82, 207);
@@ -18,18 +18,24 @@
                 <header>Curso de JavaSript com a RocketSeat</header>
                 <h1>Modulo II _ Manipulando a DOM</h1>
                 <p>
-                    Exercícios da Aula de Trabalhando com a DOM.
+                    Exercícios da Aula Trabalhando com elementos.
+                    <br> link de site pelo JavaScript.
                 </p>
             </article>
         </section>
-        <input type="text" name="nome" id="nome">
-        <input type="text" name="nome" id="nome">
-        <button class="botão">Adicionar</button>
+        <div id="app">
+
+        </div>
 
         <script>
-           var inputElement = document.querySelectorAll("body input");
-           console.log(inputElement);
-           /* Levando o input para o console*/
+           var linkElement = document.createElement('a');
+           linkElement.setAttribute('href', 'http://rocketseat.com.br');
+
+           var textElement = document.createTextNode('Acessar o site da Rocketseat');
+           linkElement.appendChild(textElement);
+
+           var containerElement = document.querySelector('#app');
+           containerElement.appendChild(linkElement);
         </script>
     </body>
 </html>
